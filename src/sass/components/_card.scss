@@ -1,0 +1,33 @@
+.card {
+    width: 340px;
+    height: 340px;
+    position: relative;
+    &__title {
+        position: absolute;
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    }
+    &__background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        border-radius: 0px 0px 10px 10px;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 58%, rgba(0, 0, 0, 0.5214460784313726) 84%);
+    }
+    &__img {
+        width: 340px;
+        height: 340px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}

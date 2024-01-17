@@ -1,0 +1,13 @@
+.home {
+    &__cards-container {
+        margin: 0 auto;
+        width: 1240px;
+        border-radius: 25px;
+        background: #f6f6f6;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 56px 50px 43px 50px;
+        gap: 50px 60px;
+    }
+}

@@ -1,0 +1,23 @@
+.header {
+    max-width: $max-width;
+    margin: 0 auto;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    &__links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 57px;
+    }
+    &__link {
+        color: $primary-color;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%; /* 34.224px */
+        text-decoration-line: underline;
+    }
+}

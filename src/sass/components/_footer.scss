@@ -1,0 +1,20 @@
+.footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+    padding: 66px 0 29px 0;
+    gap: 29px;
+    &__logo {
+        width: 122px;
+    }
+    &__text {
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+    }
+}
