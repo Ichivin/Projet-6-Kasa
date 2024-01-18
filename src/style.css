@@ -51,6 +51,7 @@ code {
   margin-top: 45px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header__links {
   display: flex;
@@ -66,7 +67,10 @@ code {
   font-style: normal;
   font-weight: 500;
   line-height: 142.6%; /* 34.224px */
-  text-decoration-line: underline;
+  text-decoration: none;
+}
+.header__link-underline {
+  text-decoration: underline;
 }
 
 .card {
@@ -102,6 +106,57 @@ code {
   object-fit: cover;
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  width: 1023px;
+}
+.accordion__header {
+  background-color: #ff6060;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 10px 20px 10px 15px;
+  width: 100%;
+}
+.accordion__title {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+.accordion__arrow-up {
+  transform: rotate(-180deg);
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+.accordion__arrow-down {
+  transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+.accordion__children {
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 10px 10px 5px 5px;
+}
+.accordion__children-visible {
+  display: block;
+}
+.accordion__children-hidden {
+  display: none;
+}
+
 .footer {
   margin-top: 50px;
   display: flex;
@@ -133,6 +188,12 @@ code {
   flex-wrap: wrap;
   padding: 56px 50px 43px 50px;
   gap: 50px 60px;
+}
+
+.about__accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .error {

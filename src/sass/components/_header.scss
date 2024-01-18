@@ -4,6 +4,7 @@
     margin-top: 45px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     &__links {
         display: flex;
         flex-direction: row;
@@ -18,6 +19,9 @@
         font-style: normal;
         font-weight: 500;
         line-height: 142.6%; /* 34.224px */
-        text-decoration-line: underline;
+        text-decoration: none;
+    }
+    &__link-underline {
+        text-decoration: underline;
     }
 }
