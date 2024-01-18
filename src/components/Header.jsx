@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../images/logo.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 function Header() {
     const location = useLocation();
@@ -10,12 +10,15 @@ function Header() {
             <nav className="nav">
                 <ul className="header__links">
                     <li>
-                        <Link
-                            className={`header__link ${location.pathname === "/" && "header__link-underline"}`}
+                        <NavLink
+                            //className={`header__link ${location.pathname === "/" && "header__link-underline"}`}
+                            className={({ isActive }) =>
+                                isActive ? "header__link header__link-underline" : "header__link"
+                            }
                             to={"/"}
                         >
                             Accueil
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
                         <Link

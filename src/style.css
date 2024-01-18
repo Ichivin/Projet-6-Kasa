@@ -147,14 +147,22 @@ code {
   font-style: normal;
   font-weight: 400;
   padding: 20px;
+  box-sizing: border-box;
   background-color: #f6f6f6;
   border-radius: 10px 10px 5px 5px;
+  overflow: hidden;
 }
 .accordion__children-visible {
-  display: block;
+  transition: max-height 0.4s ease-in-out;
+  max-height: 10000px;
+  transition: padding 0.4s ease-in-out;
+  padding: 20px 20px;
 }
 .accordion__children-hidden {
-  display: none;
+  transition: max-height 0.4s ease-in-out;
+  max-height: 0px;
+  transition: padding 0.4s ease-in-out;
+  padding: 0px 20px;
 }
 
 .footer {
