@@ -11,6 +11,11 @@ code {
 * {
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 .banner {
@@ -141,6 +146,8 @@ code {
   cursor: pointer;
 }
 .accordion__children {
+  width: 100%;
+  height: 100%;
   color: #ff6060;
   font-family: Montserrat;
   font-size: 18px;
@@ -153,16 +160,52 @@ code {
   overflow: hidden;
 }
 .accordion__children-visible {
-  transition: max-height 0.4s ease-in-out;
-  max-height: 10000px;
-  transition: padding 0.4s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  max-height: 500px;
   padding: 20px 20px;
 }
 .accordion__children-hidden {
-  transition: max-height 0.4s ease-in-out;
+  transition: all 0.6s ease-in-out;
   max-height: 0px;
-  transition: padding 0.4s ease-in-out;
   padding: 0px 20px;
+}
+
+.carousel {
+  width: 100%;
+  height: 415px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.carousel__img {
+  width: 100%;
+  height: 415px;
+  object-fit: cover;
+}
+.carousel__arrow-left {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 23px;
+  cursor: pointer;
+}
+.carousel__arrow-right {
+  position: absolute;
+  top: calc(50% - 40px);
+  right: 23px;
+  cursor: pointer;
+}
+.carousel__numbering {
+  position: absolute;
+  left: calc(50% - 12px);
+  bottom: 25px;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .footer {
@@ -200,7 +243,95 @@ code {
 
 .lodging {
   display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  max-width: 1240px;
 }
+.lodging__title {
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 5px;
+  max-width: 635px;
+}
+.lodging__location {
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.lodging__tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.lodging__tags-background {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0 30px;
+  height: 25px;
+  border-radius: 10px;
+  background: #ff6060;
+}
+.lodging__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.lodging__left {
+  display: flex;
+  flex-direction: column;
+}
+.lodging__right {
+  display: flex;
+  flex-direction: column;
+}
+.lodging__profil {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.lodging__host-name {
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.lodging__host-picture {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+.lodging__rating {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 21px;
+  width: 196px;
+  height: 36px;
+}
+.lodging__accordions {
+  display: flex;
+  gap: 76px;
+}
+.lodging__equipments {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .about__accordions {
   display: flex;
   flex-direction: column;
