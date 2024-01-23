@@ -198,6 +198,9 @@ code {
   gap: 50px 60px;
 }
 
+.lodging {
+  display: flex;
+}
 .about__accordions {
   display: flex;
   flex-direction: column;
