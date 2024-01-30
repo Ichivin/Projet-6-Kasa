@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import lodgings from "../data/logement.json";
 import Accordion from "../components/Accordion";
 import Rating from "../components/Rating";
@@ -9,10 +9,17 @@ function Lodging() {
     const { id } = useParams();
     const [lodging, setLodging] = useState({});
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
     useEffect(() => {
-        setLodging(lodgings.find((item) => item.id === id));
-        setLoading(false);
+        const searchedLodging = lodgings.find((item) => item.id === id);
+        if (searchedLodging === undefined) {
+            navigate("/404");
+        } else {
+            setLodging(searchedLodging);
+            setLoading(false);
+        }
     }, [id]);
+
     return loading ? (
         <div>loading</div>
     ) : (
@@ -23,21 +30,19 @@ function Lodging() {
                     <h1 className="lodging__title">{lodging.title}</h1>
                     <h2 className="lodging__location">{lodging.location}</h2>
                     <ul className="lodging__tags">
-                        {lodging.tags &&
-                            lodging.tags.map((tag, i) => (
-                                <li className="lodging__tags-background" key={i}>
-                                    {tag}{" "}
-                                </li>
-                            ))}
+                        {lodging.tags.map((tag, i) => (
+                            <li className="lodging__tags-background" key={i}>
+                                {tag}
+                            </li>
+                        ))}
                     </ul>
                 </div>
                 <div className="lodging__right">
-                    {lodging.host && (
-                        <div className="lodging__profil">
-                            <p className="lodging__host-name">{lodging.host.name}</p>
-                            <img className="lodging__host-picture" src={lodging.host.picture} alt={lodging.host.name} />
-                        </div>
-                    )}
+                    <div className="lodging__profil">
+                        <p className="lodging__host-name">{lodging.host.name}</p>
+                        <img className="lodging__host-picture" src={lodging.host.picture} alt={lodging.host.name} />
+                    </div>
+
                     <div className="lodging__rating">
                         <Rating rating={lodging.rating} />
                     </div>
