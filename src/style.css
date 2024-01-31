@@ -26,6 +26,7 @@ ul {
 .banner__img {
   border-radius: 25px;
   display: block;
+  width: 100%;
 }
 .banner__background {
   position: absolute;
@@ -50,6 +51,19 @@ ul {
   font-weight: 500;
 }
 
+@media (max-width: 775px) {
+  .banner {
+    margin: 27px auto 22px auto;
+  }
+  .banner__text {
+    font-size: 32px;
+  }
+}
+@media (max-width: 475px) {
+  .banner__text {
+    font-size: 24px;
+  }
+}
 .header {
   max-width: 1240px;
   margin: 0 auto;
@@ -78,9 +92,36 @@ ul {
   text-decoration: underline;
 }
 
+@media (max-width: 1300px) {
+  .header {
+    padding: 25px;
+  }
+  .header__links {
+    gap: 40px;
+  }
+  .header__link {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .header {
+    padding: 25px;
+  }
+  .header__links {
+    gap: 25px;
+  }
+  .header__link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .header__app-logo {
+    width: 100px;
+  }
+}
 .card {
-  width: 340px;
-  height: 340px;
+  max-width: 340px;
+  max-height: 340px;
   position: relative;
 }
 .card__title {
@@ -101,7 +142,6 @@ ul {
   left: 0;
   right: 0;
   border-radius: 0px 0px 10px 10px;
-  background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 58%, rgba(0, 0, 0, 0.5214460784) 84%);
 }
 .card__img {
@@ -111,13 +151,70 @@ ul {
   object-fit: cover;
 }
 
+@media (max-width: 1280px) {
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+  .card__background {
+    width: 300px;
+    height: 300px;
+  }
+  .card__img {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 1160px) {
+  .card {
+    width: 285px;
+    height: 285px;
+  }
+  .card__background {
+    width: 285px;
+    height: 285px;
+  }
+  .card__img {
+    width: 285px;
+    height: 285px;
+  }
+}
+@media (max-width: 1115px) {
+  .card {
+    width: 250px;
+    height: 250px;
+  }
+  .card__background {
+    width: 250px;
+    height: 250px;
+  }
+  .card__img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 1050px) {
+  .card {
+    width: 100%;
+    height: 200px;
+    max-width: 1000px;
+  }
+  .card__background {
+    width: 100%;
+    height: 200px;
+  }
+  .card__img {
+    width: 100%;
+    height: 200px;
+  }
+}
 .accordion {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   align-items: center;
   margin: 0 auto;
-  width: 1023px;
+  max-width: 1023px;
 }
 .accordion__header {
   background-color: #ff6060;
@@ -170,6 +267,11 @@ ul {
   padding: 0px 20px;
 }
 
+@media (max-width: 650px) {
+  .accordion {
+    margin: 0px;
+  }
+}
 .carousel {
   width: 100%;
   height: 415px;
@@ -231,7 +333,8 @@ ul {
 
 .home__cards-container {
   margin: 0 auto;
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
   border-radius: 25px;
   background: #f6f6f6;
   display: flex;
@@ -241,6 +344,20 @@ ul {
   gap: 50px 60px;
 }
 
+@media (max-width: 1300px) {
+  .home {
+    margin: 20px;
+  }
+  .home__cards-container {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 865px) {
+  .home__cards-container {
+    background: none;
+    padding: 20px 0px;
+  }
+}
 .lodging {
   display: flex;
   flex-direction: column;
@@ -332,12 +449,43 @@ ul {
   gap: 5px;
 }
 
+@media (max-width: 1300px) {
+  .lodging {
+    margin: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .lodging__wrapper {
+    flex-direction: column;
+  }
+  .lodging__right {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .lodging__accordions {
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .lodging__host-name {
+    font-size: 14px;
+  }
+  .lodging__rating {
+    width: 108px;
+    height: 24px;
+  }
+}
 .about__accordions {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
+@media (max-width: 1300px) {
+  .about {
+    margin: 20px;
+  }
+}
 .error {
   display: flex;
   flex-direction: column;
@@ -366,6 +514,34 @@ ul {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .error__title {
+    font-size: 200px;
+  }
+  .error__text {
+    font-size: 26px;
+  }
+}
+@media (max-width: 675px) {
+  .error__title {
+    font-size: 150px;
+  }
+  .error__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 475px) {
+  .error__title {
+    font-size: 125px;
+  }
+  .error__text {
+    font-size: 14px;
+  }
+  .error__link {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

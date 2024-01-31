@@ -6,6 +6,7 @@
     &__img {
         border-radius: 25px;
         display: block;
+        width: 100%;
     }
     &__background {
         position: absolute;
@@ -28,5 +29,22 @@
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
+    }
+}
+
+@media (max-width: 775px) {
+    .banner {
+        margin: 27px auto 22px auto;
+        &__text {
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .banner {
+        &__text {
+            font-size: 24px;
+        }
     }
 }

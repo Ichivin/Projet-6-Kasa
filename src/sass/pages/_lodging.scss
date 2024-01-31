@@ -88,3 +88,33 @@
         gap: 5px;
     }
 }
+
+@media (max-width: 1300px) {
+    .lodging {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .lodging {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__right {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        &__accordions {
+            padding-top: 20px;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__host-name {
+            font-size: 14px;
+        }
+        &__rating {
+            width: 108px;
+            height: 24px;
+        }
+    }
+}
