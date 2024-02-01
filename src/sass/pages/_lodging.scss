@@ -4,8 +4,7 @@
     margin: 50px auto;
     max-width: $max-width;
     &__title {
-        color: #ff6060;
-        font-family: Montserrat;
+        color: $primary-color;
         font-size: 36px;
         font-style: normal;
         font-weight: 500;
@@ -13,8 +12,7 @@
         max-width: 635px;
     }
     &__location {
-        color: #ff6060;
-        font-family: Montserrat;
+        color: $primary-color;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -25,7 +23,6 @@
         gap: 10px;
         color: #fff;
         text-align: center;
-        font-family: Montserrat;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -39,7 +36,7 @@
         padding: 0 30px;
         height: 25px;
         border-radius: 10px;
-        background: #ff6060;
+        background: $primary-color;
     }
     &__wrapper {
         display: flex;
@@ -60,8 +57,7 @@
         gap: 10px;
     }
     &__host-name {
-        color: #ff6060;
-        font-family: Montserrat;
+        color: $primary-color;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -95,8 +91,22 @@
     }
 }
 
+@media (max-width: 750px) {
+    .lodging {
+        &__tags {
+            font-size: 11px;
+        }
+        &__tags-background {
+            min-width: fit-content;
+        }
+    }
+}
+
 @media (max-width: 650px) {
     .lodging {
+        &__title {
+            font-size: 28px;
+        }
         &__wrapper {
             flex-direction: column;
         }
@@ -113,8 +123,15 @@
             font-size: 14px;
         }
         &__rating {
-            width: 108px;
+            width: 130px;
             height: 24px;
+        }
+        &__tags {
+            font-size: 10px;
+            flex-wrap: wrap;
+        }
+        &__tags-background {
+            padding: 2px 22px;
         }
     }
 }

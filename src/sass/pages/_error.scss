@@ -5,23 +5,20 @@
     margin-top: 139px;
     gap: 139px;
     &__title {
-        color: #ff6060;
-        font-family: Montserrat;
+        color: $primary-color;
         font-size: 288px;
         font-style: normal;
         font-weight: 700;
     }
     &__text {
-        color: #ff6060;
-        font-family: Montserrat;
+        color: $primary-color;
         font-size: 36px;
         font-style: normal;
         font-weight: 500;
     }
     &__link {
         margin-bottom: 139px;
-        color: #ff6060;
-        font-family: Montserrat;
+        color: $primary-color;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;

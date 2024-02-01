@@ -1,7 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat";
 }
 
 code {
@@ -81,7 +79,6 @@ ul {
 .header__link {
   color: #ff6060;
   text-align: right;
-  font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -127,7 +124,6 @@ ul {
 .card__title {
   position: absolute;
   color: #fff;
-  font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -215,6 +211,7 @@ ul {
   align-items: center;
   margin: 0 auto;
   max-width: 1023px;
+  flex: 1;
 }
 .accordion__header {
   background-color: #ff6060;
@@ -227,7 +224,6 @@ ul {
 }
 .accordion__title {
   color: #fff;
-  font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -246,7 +242,6 @@ ul {
   width: 100%;
   height: 100%;
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -270,6 +265,12 @@ ul {
 @media (max-width: 650px) {
   .accordion {
     margin: 0px;
+  }
+  .accordion__title {
+    font-size: 18px;
+  }
+  .accordion__children {
+    font-size: 16px;
   }
 }
 .carousel {
@@ -310,6 +311,18 @@ ul {
   font-weight: 500;
 }
 
+@media (max-width: 1275px) {
+  .carousel__arrow-left {
+    top: calc(50% - 12px);
+    width: 25px;
+    height: 25px;
+  }
+  .carousel__arrow-right {
+    top: calc(50% - 12px);
+    width: 25px;
+    height: 25px;
+  }
+}
 .footer {
   margin-top: 50px;
   display: flex;
@@ -325,7 +338,6 @@ ul {
 .footer__text {
   color: #fff;
   text-align: center;
-  font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -366,7 +378,6 @@ ul {
 }
 .lodging__title {
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -375,7 +386,6 @@ ul {
 }
 .lodging__location {
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -386,7 +396,6 @@ ul {
   gap: 10px;
   color: #fff;
   text-align: center;
-  font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -422,7 +431,6 @@ ul {
 }
 .lodging__host-name {
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -454,7 +462,18 @@ ul {
     margin: 20px;
   }
 }
+@media (max-width: 750px) {
+  .lodging__tags {
+    font-size: 11px;
+  }
+  .lodging__tags-background {
+    min-width: fit-content;
+  }
+}
 @media (max-width: 650px) {
+  .lodging__title {
+    font-size: 28px;
+  }
   .lodging__wrapper {
     flex-direction: column;
   }
@@ -471,8 +490,15 @@ ul {
     font-size: 14px;
   }
   .lodging__rating {
-    width: 108px;
+    width: 130px;
     height: 24px;
+  }
+  .lodging__tags {
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+  .lodging__tags-background {
+    padding: 2px 22px;
   }
 }
 .about__accordions {
@@ -495,14 +521,12 @@ ul {
 }
 .error__title {
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 288px;
   font-style: normal;
   font-weight: 700;
 }
 .error__text {
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -510,7 +534,6 @@ ul {
 .error__link {
   margin-bottom: 139px;
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;

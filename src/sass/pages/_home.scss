@@ -1,7 +1,7 @@
 .home {
     &__cards-container {
         margin: 0 auto;
-        max-width: 1240px;
+        max-width: $max-width;
         width: 100%;
         border-radius: 25px;
         background: #f6f6f6;

@@ -38,5 +38,15 @@
 
 @media (max-width: 1275px) {
     .carousel {
+        &__arrow-left {
+            top: calc(50% - 12px);
+            width: 25px;
+            height: 25px;
+        }
+        &__arrow-right {
+            top: calc(50% - 12px);
+            width: 25px;
+            height: 25px;
+        }
     }
 }
